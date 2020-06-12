@@ -1,13 +1,4 @@
 ## WooCommerce Clickstream Analytics
-Contributors: jumaphelix2013
-Tags: ecommerce, e-commerce, commerce, woocommerce, tracking, clickstream, analytics, insense, data
-Donate link: https://insensedata.com
-Requires at least: 4.0
-Tested up to: 5.4
-Requires PHP: 5.6
-Stable tag: 1.0.0
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 A clickstream analytics platform for WooCommerce to help you better understand your customer's shopping funnel.
 
