@@ -132,8 +132,6 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
             /**
              * Define the constants
              *
-             * @since 1.2.5
-             *
              * @return void
              */
             public function define_constants() {
@@ -148,7 +146,6 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
             /**
              * Plugin activation routeis
              *
-             * @since 1.2.5
              *
              * @return void
              */
@@ -198,16 +195,6 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
             }
 
             /**
-             * Initialize the weDevs insights tracker
-             *
-             * @since 1.2.3
-             *
-             * @return void
-             */
-            public function init_tracker() {
-            }
-
-            /**
              * Plugin action links
              *
              * @param  array $links
@@ -238,11 +225,16 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 
         }
 
+        /**
+         * Instantiates the class
+         *
+         * @return bool|WC_Clickstream_Analytics
+         */
         function wcia_init() {
             return WC_Clickstream_Analytics::init();
         }
 
-        // initiate the class
+        // instantiate the class
         wcia_init();
 
         /**
