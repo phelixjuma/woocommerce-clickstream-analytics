@@ -170,8 +170,6 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 
                 add_action( 'admin_notices', array( $this, 'check_woocommerce_exist' ) );
                 add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), array( $this, 'plugin_action_links' ) );
-
-                $this->init_tracker();
             }
 
             /**
