@@ -1,0 +1,365 @@
+/*
+Woocommerce-Insense-Analytics - v1.0.0
+*/
+.wcia-admin {
+  /**
+     * Form Settings area
+     */
+  /**
+     * Sidebar Area
+     */
+}
+.wcia-admin .nav-tab.disabled {
+  color: #b1b1b1;
+}
+.wcia-admin .wcia-two-column {
+  display: flex;
+}
+.wcia-admin .wcia-two-column .settings-wrap {
+  width: 70%;
+}
+.wcia-admin .wcia-two-column .sidebar-wrap {
+  width: 33%;
+}
+.wcia-admin .switch input {
+  display: none;
+}
+.wcia-admin .switch input:checked + .slider {
+  background-color: #64b450;
+}
+.wcia-admin .switch input:checked + .slider:before {
+  -webkit-transform: translateX(22px);
+  -ms-transform: translateX(22px);
+  transform: translateX(22px);
+}
+.wcia-admin .switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #CCC;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.wcia-admin .switch .slider.round {
+  border-radius: 34px;
+}
+.wcia-admin .switch .slider.round:before {
+  border-radius: 50%;
+}
+.wcia-admin .switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.wcia-admin input {
+  width: 30%;
+  padding: 8px 12px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.wcia-admin input[type="checkbox"] {
+  border: 1px solid #b4b9be;
+  background: #fff;
+  color: #555;
+  clear: none;
+  cursor: pointer;
+  line-height: 0;
+  height: 16px;
+  margin: -4px 4px 0 0;
+  outline: 0;
+  padding: 0!important;
+  text-align: center;
+  vertical-align: middle;
+  width: 16px;
+  min-width: 16px;
+  -webkit-appearance: none;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: 0.05s border-color ease-in-out;
+}
+.wcia-admin .slider.round:before {
+  border-radius: 50%;
+}
+.wcia-admin .submit-area {
+  display: block;
+  overflow: hidden;
+  margin-top: 30px;
+  padding-bottom: 10px;
+  max-width: 600px;
+}
+.wcia-admin .submit-area #wcia-submit {
+  float: right;
+}
+.wcia-admin .custom-table {
+  margin-top: 0;
+}
+.wcia-admin .custom-table th {
+  width: 150px !important;
+}
+.wcia-admin .custom-table td {
+  font-weight: normal;
+}
+.wcia-admin .custom-table textarea {
+  font-family: monospace;
+}
+.wcia-admin .custom-table .help {
+  font-weight: normal;
+}
+.wcia-admin .settings-wrap h4 {
+  margin-top: 5px;
+}
+.wcia-admin .settings-wrap .integration-wrap {
+  max-width: 600px;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+  margin-top: 20px;
+  background: #fff;
+}
+.wcia-admin .settings-wrap .integration-wrap .integration-name {
+  background: #ffffff;
+  padding: 15px 15px;
+  border-bottom: 1px solid #f1f1f1;
+}
+.wcia-admin .settings-wrap .integration-wrap .integration-settings {
+  background: #fff;
+  padding-left: 25px;
+  display: none;
+}
+.wcia-admin .settings-wrap .integration-wrap .integration-settings .wc-ia-option {
+  margin-left: 0px;
+  margin-top: 15px;
+}
+.wcia-admin .settings-wrap .integration-wrap .integration-settings textarea {
+  width: 100%;
+}
+.wcia-admin .settings-wrap .integration-wrap .integration-settings input[type="text"] {
+  min-width: 300px;
+}
+.wcia-admin .settings-wrap .integration-wrap .integration-settings .wc-ia-form-group {
+  padding: 10px;
+  margin-right: 25px;
+  margin-bottom: 15px;
+  margin-top: 20px;
+}
+.wcia-admin .settings-wrap .integration-wrap .integration-settings .wcia-border {
+  border: 1px solid #e5e5e5;
+}
+.wcia-admin .settings-wrap .integration-wrap .gateway {
+  display: flex;
+  flex-flow: 1 1 auto;
+}
+.wcia-admin .settings-wrap .integration-wrap .gateway img {
+  height: 26px;
+  width: auto;
+  margin-right: 15px;
+}
+.wcia-admin .settings-wrap .integration-wrap .gateway label,
+.wcia-admin .settings-wrap .integration-wrap .gateway .gateway-text {
+  flex: 1 1 auto;
+  max-width: 15%;
+}
+.wcia-admin .settings-wrap .integration-wrap .gateway .gateway-text {
+  margin: 0 30px 0 0;
+  max-width: 90%;
+  font-size: 1.2em;
+  line-height: 26px;
+}
+.wcia-admin .settings-wrap .integration-wrap .gateway label.switch {
+  position: relative;
+  display: inline-block;
+  max-width: 40px;
+  height: 18px;
+  margin-top: 5px;
+}
+.wcia-admin .settings-wrap .integration-wrap .single-integration {
+  padding-bottom: 15px !important;
+}
+.wcia-admin .settings-wrap .integration-wrap .event-label-box {
+  display: none;
+}
+.wcia-admin .settings-wrap .integration-wrap .event-label-space {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.wcia-admin .settings-wrap .integration-wrap .disabled-class {
+  color: #ccc;
+}
+@media (max-width: 1024px) {
+  .wcia-admin .settings-wrap {
+    margin-right: 40px;
+  }
+}
+.wcia-admin .sidebar-wrap {
+  margin-top: 50px;
+}
+.wcia-admin .sidebar-wrap .premium-box {
+  width: 100%;
+  min-height: 100px;
+  margin-bottom: 25px;
+  box-sizing: border-box;
+  padding: 10px 20px;
+  border: 1px solid #dfdfdf;
+}
+.wcia-admin .sidebar-wrap .premium-box.box-green {
+  background: #ffffff;
+}
+.wcia-admin .sidebar-wrap .premium-box.box-blue {
+  color: #444;
+  background: #fff;
+  padding-bottom: 27px;
+}
+.wcia-admin .sidebar-wrap .premium-box.box-blue p {
+  font-size: 15px;
+  font-weight: normal;
+}
+.wcia-admin .sidebar-wrap .premium-box.box-blue h3 {
+  color: #444;
+}
+.wcia-admin .sidebar-wrap .premium-box.box-blue .pro-button {
+  text-decoration: none;
+  padding: 5px 20px;
+  background: #fff;
+  border-radius: 50px;
+  color: #F37599;
+}
+.wcia-admin .sidebar-wrap .premium-box.box-blue .dashicons-yes {
+  color: green;
+  font-size: 1.5em;
+}
+.wcia-admin .sidebar-wrap .premium-box.box-blue ul.premium-feature-list {
+  margin-bottom: 15px;
+}
+.wcia-admin .sidebar-wrap .premium-box.box-blue .premium-feature-list li:before {
+  content: "\f147";
+  font-family: dashicons;
+  display: inline-block;
+  background: #64b450;
+  color: #fff;
+  padding: 0 3px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+.wcia-admin .sidebar-wrap .premium-box .wcia-doc-title {
+  color: #444;
+}
+.wcia-admin .sidebar-wrap .premium-box .wcia-doc-list {
+  display: flex;
+  flex-flow: row wrap;
+}
+.wcia-admin .sidebar-wrap .premium-box .wcia-doc-list li {
+  list-style: none;
+  text-align: center;
+  margin: 5px;
+  flex: 0 1 100%;
+  display: list-item;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 0 0 15px 0;
+}
+.wcia-admin .sidebar-wrap .premium-box .wcia-doc-list li a {
+  text-decoration: none;
+  font-size: 13px;
+  color: #444;
+  display: block;
+}
+.wcia-admin .sidebar-wrap .premium-box .wcia-doc-list li img.doc-list-icon {
+  display: block;
+  width: 24px;
+  height: auto;
+  margin: 10px auto;
+}
+@media (min-width: 768px) {
+  .wcia-admin .sidebar-wrap .premium-box .wcia-doc-list li {
+    flex: 0 1 100%;
+  }
+}
+@media (min-width: 992px) {
+  .wcia-admin .sidebar-wrap .premium-box .wcia-doc-list li {
+    flex: 0 1 calc(45%);
+  }
+}
+@media (min-width: 1367px) {
+  .wcia-admin .sidebar-wrap .premium-box .wcia-doc-list li {
+    flex: 0 1 calc(28%);
+  }
+}
+.wcia-admin .wcia-tooltip {
+  position: relative;
+  display: inline-block;
+}
+.wcia-admin .wcia-tooltip .wcia-tooltiptext {
+  visibility: hidden;
+  background-color: #24292E;
+  font-size: 10px;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 3px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.wcia-admin .wcia-tooltip .integration-tooltip {
+  margin-left: -40px;
+  padding: 7px 0px;
+  font-size: 13px;
+  width: 75px;
+}
+.wcia-admin .wcia-tooltip .wcia-tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #24292E transparent transparent transparent;
+}
+.wcia-admin .wcia-tooltip:hover .wcia-tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+.wcia-notice-wrap {
+  overflow: hidden;
+  padding: 22px 15px;
+}
+.wcia-message-icon {
+  width: 10%;
+  float: left;
+}
+.wcia-message-icon img {
+  height: 50px;
+}
+.wcia-message-content {
+  width: 70%;
+  float: left;
+  margin-top: 20px;
+}
+.wcia-message-content p {
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+}
+.wcia-message-action {
+  width: 16.5%;
+  float: right;
+  text-align: center;
+  margin-right: 1.2%;
+}
+#wcia_remote_notice {
+  display: none;
+}
