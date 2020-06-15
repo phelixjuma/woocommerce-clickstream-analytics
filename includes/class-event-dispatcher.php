@@ -6,14 +6,28 @@
 class WCIA_Event_Dispatcher {
 
 
+    private $options;
+
     /**
      * Constructor for WCIA_Event_Dispatcher class
      */
     public function __construct() {
 
-        add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
+        $this->options = get_option('wcia_settings');
 
-        $this->setActions();
+        // only track when not disabled
+        if($this->options['disabled'] == 0) {
+
+            add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
+
+            // show cookie consent bar if show cookie consent setting is enabled.
+            if($this->options['show-cookie-consent'] == 1) {
+                add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_cookie_consent_scripts' ) );
+                add_action( 'wp_footer', array( $this, 'cookie_consent' ) );
+            }
+
+            $this->setActions();
+        }
     }
 
     /**
@@ -38,6 +52,40 @@ class WCIA_Event_Dispatcher {
                 'access_key'    => get_option('wcia_settings')['access_key']
             )
         );
+    }
+
+    public function enqueue_cookie_consent_scripts() {
+        wp_enqueue_style( 'cookie-consent-style', "https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css", false);
+        //wp_enqueue_script( 'wcia-analytics-init', "https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" );
+    }
+
+    /**
+     * Cookie consent content
+     */
+    public function cookie_consent() {
+        ?>
+        <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+        <script>
+            window.cookieconsent.initialise({
+                "palette": {
+                    "popup": {
+                        "background": "#000"
+                    },
+                    "button": {
+                        "background": "#f1d600"
+                    }
+                },
+                "type": "opt-out",
+                "content": {
+                    "message": "This website uses cookies to ensure you get the best experience on our website.",
+                    "dismiss": "Got it!",
+                    "deny": "Decline",
+                    "link": "Learn more",
+                    "href": "<?php echo $this->options['privacy_policies_link']; ?>"
+                }
+            });
+        </script>
+        <?php
     }
 
     private function setActions() {

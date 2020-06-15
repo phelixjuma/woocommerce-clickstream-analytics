@@ -14,7 +14,23 @@ A clickstream analytics platform for WooCommerce to help you better understand y
 == Description ==
 
 This plugin implements the  [Insense E-Commerce Clickstream Analytics](https://github.com/phelixjuma/ecommerce-tracking-analytics) SDK.
-Insense Clickstream Analytics captures clickstream data from your site and the clickstream analytics reports can be accessed via your account on [Insense](https://portal.insensedata.com).
+Insense Clickstream Analytics captures clickstream data from your site and the clickstream analytics reports can be accessed via your account on
+[Insense](https://portal.insensedata.com).
+
+Among the services offered by Insense platform under the clickstream analytics package include:
+
+- Traffic Analysis:
+  - get to know where traffic is coming from,
+  - popular key words,
+  - conversion rates from different sites,
+- Sales Funnel analysis:
+  - understand drop off percentage or conversion at every stage,
+  - identify general health and which stages contribute to drop offs,
+  - identify reasons for drop offs
+- Cart abandonment and recovery:
+  - understand cart abandonment metrics and possible reasons/causes
+
+All services and usage are as per the Insense Data Technologies [Terms of Use] (https://insensedata.com/terms) and [Data Policies] (https://insensedata.com/data-policies)
 
 
 = Contribute =

@@ -38,6 +38,18 @@ class WCIA_Ajax {
         }
 
         $data['access_key'] = $_POST['access_key'];
+        $data['disabled'] = 0;
+        $data['show-cookie-consent'] = 0;
+        $data['privacy_policies_link'] = "";
+        if ( isset($_POST['disabled']) && !empty($_POST['disabled'])) {
+            $data['disabled'] = 1;
+        }
+        if ( isset($_POST['show-cookie-consent']) && !empty($_POST['show-cookie-consent'])) {
+            $data['show-cookie-consent'] = 1;
+        }
+        if ( isset($_POST['privacy_policies_link']) && !empty($_POST['privacy_policies_link'])) {
+            $data['privacy_policies_link'] = $_POST['privacy_policies_link'];
+        }
 
         update_option( 'wcia_settings', stripslashes_deep( $data ) );
 
